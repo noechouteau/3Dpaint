@@ -174,7 +174,6 @@ const createCircle = () => {
         },
         vertexShader: vert3, 
         fragmentShader: frag3,
-        transparent: true,
     });
     const circle = new THREE.Mesh( geometry, material );
     circle.rotation.x = Math.PI * 1.5;
@@ -331,7 +330,7 @@ const changeWorld = (world) => {
             sky.rotation.x = Math.PI * -0.4;
             sky.position.z = -40;
             sky.position.y = 0;
-            ground.rotation.z = 0;
+            ground.rotation.z = Math.PI * -0.12;
             sky.material.uniforms.uTexture.value = drawWall;
             sky.material.uniforms.uTexture.needsUpdate = true;
             ground.material.uniforms.uTexture.value = groundTexture4;

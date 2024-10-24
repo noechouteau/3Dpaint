@@ -87,7 +87,7 @@ const frag3 = /* glsl */ `
 
         vec4 finalColor = texture(uTexture, uv+p*0.5);
         if(uBiome == 3.){
-            finalColor = texture(uTexture, uv+p*0.7);
+            finalColor = texture(uTexture, uv+p*0.5);
         }
         gl_FragColor = finalColor;
     }
